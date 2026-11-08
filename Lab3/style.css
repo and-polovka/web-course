@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 25px 15px;
+  background-color: #fff;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-lg-4,
+.col-md-6,
+.col-md-12,
+.col-sm-12 {
+  float: left;
+  padding: 10px;
+}
+
+.card {
+  position: relative;
+  background-color: #d6e8d5;
+  border: 2px solid #000;
+  padding: 55px 20px 20px 20px;
+  min-height: 220px;
+}
+
+.card-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 5px 22px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.title-1 {
+  background-color: #f5a623;
+  color: #000;
+}
+
+.title-2 {
+  background-color: #d81b60;
+  color: #fff;
+}
+
+.title-3 {
+  background-color: #f8c1b8;
+  color: #000;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.switch-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.link-btn {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 18px;
+  background-color: #2b2b2b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.link-btn:hover {
+  background-color: #444;
+}
+
+@media (min-width: 993px) {
+  .col-lg-4 {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
