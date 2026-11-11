@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+h2, h3 {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.box {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.b1 { background-color: #2c3e50; color: #ffffff; }
+.b2 { background-color: #16a085; color: #ffffff; }
+.b3 { background-color: #d35400; color: #ffffff; }
+.b4 { background-color: #8e44ad; color: #ffffff; }
+
+.title {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f1c40f;
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    width: 160px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.box p, .box li, .box td, .box th {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.box h3.title {
+    font-size: 1.2rem;
+}
+
+.box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.box th, .box td {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px;
+    text-align: left;
+}
+
+.box img {
+    width: 320px;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.link-wrap {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.link-wrap a {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .b1, .b2 {
+        grid-column: span 1;
+    }
+    .b3, .b4 {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .b1, .b2, .b3 {
+        grid-column: span 1;
+    }
+    .b4 {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .b1, .b2, .b3, .b4 {
+        grid-column: span 1;
+    }
+}
